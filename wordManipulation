@@ -1,0 +1,13 @@
+s=input()
+d={}
+for x in s:
+    if x.lower() in d.keys():
+        d[x.lower()]+=x
+    else:
+        d[x.lower()]=x
+l=list(d.keys())
+l.sort()
+for i in range(len(l)//2):
+    print(d[l[i]]+d[l[len(l)-i-1]],end='')
+if len(l)%2:
+    print(d[l[len(l)//2]])
